@@ -1,0 +1,13 @@
+*.log
+.cache
+.DS_Store
+src/.temp
+node_modules
+dist
+.env
+.env.*
+static/rss.xml
+cypress/
+cypress.json
+docs/
+netlify.tom
