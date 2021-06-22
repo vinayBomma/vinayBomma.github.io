@@ -10,4 +10,4 @@ static/rss.xml
 cypress/
 cypress.json
 docs/
-netlify.tom
+netlify.toml

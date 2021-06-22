@@ -34,7 +34,7 @@
       </p>
 
       <div class="flex justify-center w-full mt-4">
-        <g-link to="../../static/resume.pdf" target="_blank">
+        <g-link to="/VinayBomma_Resume.pdf" target="_blank">
           <button
             class="block bg-green-700 hover:bg-green-800 text-white text-sm font-semibold tracking-wide uppercase shadow rounded cursor-pointer px-6 py-3"
           >
@@ -266,7 +266,7 @@
           </p>
 
           <div class="text-lg sm:text-lg mb-16">
-            <form class="mb-12" action="https://formspree.io/f/mdoyzjbj" method="POST"> 
+            <form @submit.prevent="submitForm" class="mb-12">
               <div class="flex flex-wrap mb-6 -mx-4">
                 <div class="w-full md:w-1/2 mb-6 md:mb-0 px-4">
                   <label class="block mb-2 text-copy-primary" for="name">
@@ -277,6 +277,7 @@
                     type="text"
                     name="name"
                     id="name"
+                    v-model="formName"
                     placeholder="John Doe"
                     class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-green-700 mb-2 p-4"
                     required
@@ -292,6 +293,7 @@
                     type="email"
                     name="email"
                     id="email"
+                    v-model="formEmail"
                     placeholder="johndoe@example.com"
                     class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-green-700 mb-2 p-4"
                     required
@@ -308,6 +310,7 @@
                   id="message"
                   rows="5"
                   name="message"
+                  v-model="formMessage"
                   class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none appearance-none focus:border-green-700 mb-2 px-4 py-4"
                   placeholder="Enter your message here."
                   required
@@ -449,16 +452,43 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   metaInfo: {
     title: "Home",
   },
-  // data() {
-  //   return {
-  //     formName: null,
-  //     formEmail: null,
-  //     formMessage: null,
-  //   };
-  // },
+  data() {
+    return {
+      formName: null,
+      formEmail: null,
+      formMessage: null,
+    };
+  },
+  methods: {
+    submitForm() {
+      const info = {
+        name: this.formName,
+        email: this.formEmail,
+        message: this.formMessage,
+      };
+      axios({
+        url: "https://formspree.io/f/mdoyzjbj",
+        method: "POST",
+        data: info,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then(() => {
+          this.formName = null;
+          this.formEmail = null;
+          this.formMessage = null;
+          alert("Messsage sent successfully!");
+        })
+        .catch((error) => {
+          console.log("error: " + error);
+        });
+    },
+  },
 };
 </script>

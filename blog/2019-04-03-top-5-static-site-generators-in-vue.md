@@ -1,8 +1,8 @@
 ---
-title: Top 5 Static Site Generators in Vue
+title: 5 nifty VScode shortcuts I use regularly
 path: /top-5-static-site-generators-in-vue
-date: 2019-04-03
-summary: Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic rerum earum quos explicabo suscipit maxime iste qui nihil. Reiciendis asperiores minus necessitatibus
+date: 2020-08-12
+summary: Here are my 5 favourite VScode shortcuts I use on a regular basis. Hope it helps you optimise your coding workflow.
 tags: ['frontend', 'coding', 'vue']
 ---
 

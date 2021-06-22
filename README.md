@@ -1,6 +1,6 @@
 # Portfolio
 
-A simple portfolio starter theme for Gridsome
+A simple portfolio I made using Vuejs & Gridsome
 
 ## Website URL
 
