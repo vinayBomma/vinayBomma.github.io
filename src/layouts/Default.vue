@@ -74,7 +74,7 @@
           </li>
 
           <li>
-            <a href="https://www.linkedin.com/in/vinay-bomma-57b78b214/" target="_blank" class="text-white hover:text-gray-400">
+            <a href="https://www.linkedin.com/in/vinaybomma" target="_blank" class="text-white hover:text-gray-400">
               <g-image style="color:white" src="../../static/linkedin.png" alt="" />
             </a>
           </li>
