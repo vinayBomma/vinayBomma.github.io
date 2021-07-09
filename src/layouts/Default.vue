@@ -29,26 +29,26 @@
           </li> -->
           <li>
             <a v-if="$route.path === '/'" href="/#skills" v-scroll-to="{ el: '#skills', offset: -25 }" class="text-copy-primary hover:text-gray-600">Skills</a>
-            <g-link v-else to="/#projects" class="text-copy-primary hover:text-gray-600">Projects</g-link>
+            <!-- <g-link v-else to="/#projects" class="text-copy-primary hover:text-gray-600">Projects</g-link> -->
           </li>
           <li>
             <a v-if="$route.path === '/'" href="/#projects" v-scroll-to="{ el: '#projects', offset: -25 }" class="text-copy-primary hover:text-gray-600" data-cypress="projects">Projects</a>
-            <g-link v-else to="/#projects" class="text-copy-primary hover:text-gray-600">Projects</g-link>
+            <!-- <g-link v-else to="/#projects" class="text-copy-primary hover:text-gray-600">Projects</g-link> -->
           </li>
           <li>
             <a v-if="$route.path === '/'" href="/#about" v-scroll-to="{ el: '#about', offset: -90 }" class="text-copy-primary hover:text-gray-600" data-cypress="about">About</a>
-            <g-link v-else to="/#about" class="text-copy-primary hover:text-gray-600">About</g-link>
+            <!-- <g-link v-else to="/#about" class="text-copy-primary hover:text-gray-600">About</g-link> -->
           </li>
           <li>
             <a v-if="$route.path === '/'" href="/#contact" v-scroll-to="{ el: '#contact', offset: -25 }" class="text-copy-primary hover:text-gray-600" data-cypress="contact">Contact</a>
-            <g-link v-else to="/#contact" class="text-copy-primary hover:text-gray-600">Contact</g-link>
+            <a v-else href="/" class="text-copy-primary hover:text-gray-600">Home</a>
           </li>
           <!-- <li>
             <g-link to="/docs" class="text-copy-primary hover:text-gray-600" data-cypress="docs">Docs</g-link>
           </li> -->
-          <!-- <li>
-            <g-link to="/blog" class="text-copy-primary hover:text-gray-600" data-cypress="blog">Blog</g-link>
-          </li> -->
+          <li>
+            <g-link v-if="$route.path !== '/blog'" to="/blog" class="text-copy-primary hover:text-gray-600" data-cypress="blog">Blog</g-link>
+          </li>
         </ul>
       </nav>
     </header>

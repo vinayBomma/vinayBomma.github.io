@@ -6,17 +6,18 @@ summary: Here are my 5 favourite VScode shortcuts I use on a regular basis. Hope
 tags: ['frontend', 'coding', 'vue']
 ---
 
-![background](./images/blog_bg_3.jpg)
+![background](./images/vscode.jpeg)
 
-An h1 header
-============
+In the time I have used VSCode, I have come across some cool shortcuts which have improved my workflow. 
 
-Paragraphs are separated by a blank line.
+## 1. Ctrl + D
+
+
 
 2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
 look like:
 
-lorem30
+lorem
 
   * this one
   * that one
